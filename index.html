@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <section class="upper">
+                <h1>Password Generator</h1>
+                <div id="password" tabindex="0" role="textbox" aria-label="Generated password">
+                    <p>Generated password will appear here</p>
+                </div>
+                <div class="rangeSlider">
+                    <label for="lengthSlider">
+                        Password Length:
+                        <span id="lengthValue">8</span> characters
+                    </label>
+                    <input type="range" min="8" max="25" value="8" id="lengthSlider" aria-valuemin="8" aria-valuemax="25" aria-valuenow="8">
+                </div>
+            </section>
+            <div class="checkboxes">
+                <div class="formControl">
+                    <input type="checkbox" id="uppercase" aria-labelledby="uppercaseLabel">
+                    <label for="uppercase" id="uppercaseLabel">Include Uppercase Letters</label>
+                </div>
+                <div class="formControl">
+                    <input type="checkbox" id="numbers" aria-labelledby="numbersLabel">
+                    <label for="numbers" id="numbersLabel">Include Numbers</label>
+                </div>
+                <div class="formControl">
+                    <input type="checkbox" id="symbols" aria-labelledby="symbolsLabel">
+                    <label for="symbols" id="symbolsLabel">Include Symbols</label>
+                </div>
+            </div>
+            <button id="genBtn" aria-label="Generate Password Button">Generate Password</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
